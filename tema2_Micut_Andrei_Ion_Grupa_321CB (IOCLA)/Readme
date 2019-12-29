@@ -1,0 +1,11 @@
+
+Micut Andrei-Ion, Grupa 321CB
+
+	
+											    Tema2
+											~Steganography~
+
+	Task 1: Bruteforce pe XOR cu cheie de un octet
+	
+
+	Am debutat crearea temei prin punerea pe stiva a imaginii, iar apoi, am realizat functia bruteforce_singlebyte_xor ce primeste imaginea si afiseaza cheia folosita in criptarea mesajului, linia la care a fost gasit mesajul, precum si mesajul decriptat in-place. Mai intai aplic xor pentru fiecare pixel din imagine si cheie si testez toate numerele care pot intra pe un octet si caut mesajul criptat dupa aplicarea cheilor. Realizez functia prin mutarea latimii imaginii in registrul ebx, mutarea lungimii in registrul eax, realizez inmultirea cu ebx si mut valoarea rezultata in urma inmultirii in registrul ecx. Continui prin testarea unei chei noi si vad daca am terinat de testat cheile. Realizez verficarea fiecarui caracter in parte al cheii de la sfarsit spre inceput. Verific daca am gasit caracterul 't', iar daca o cheie a dat eronat, continui cu restul cheilor. Numar cat ma deplasez in cazul in care am gasit caracterul cautat. Daca am gasit caracterul cautat, ma duc la stanga, iau pixelul, decriptez si verific daca urmatorul caracter este cel cautat. Daca am gasit cheia, atunci adun cati pixeli am scos. La sfarsit pun in eax cheia si o afisez. Linia la care a fost gasit mesajul, precum si mesajul decriptat in-place.
